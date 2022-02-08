@@ -1,0 +1,231 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --pozadina: #ffc600;
+    --direction: right;
+    --direction1: left;
+}
+
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY */
+body {
+    background: url('../img/topography\ \(1\).svg') no-repeat center center/cover,
+    linear-gradient(110deg, #f93d66, #6d47d9);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    margin: 50px;
+    text-shadow: 0 2 0 rgb(0, 0, 8%);
+}
+
+
+
+/* utility */
+ul {
+    list-style-type: none;
+}
+ 
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+
+/* wrap */
+.wrap {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/* navbar */
+#navbar ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 10px 0;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+#navbar ul li a {
+    display: grid;
+    padding: 10px;
+    color: #333;
+    background-color: var(--pozadina);
+}
+
+/* wrap top + IMG */
+.wrap-top {
+    display: grid;
+    min-height: 400px;
+    grid-template-areas: 
+    'head head add1'
+    'head head add2';
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.wrap-top .head {
+    grid-area: head;
+    background: url('../img/taco.jpg') no-repeat center center/cover;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* head */
+.head h1,
+.head p {
+    background-color: var(--pozadina);
+    padding: 5px;
+}
+
+/* wrap 1 */
+.wrap-top .add1 {
+    grid-area: add1;
+    background-color: var(--pozadina);
+    text-align: center;
+    font-size: 25px;
+    padding: 30px;
+}
+
+
+/* wrap 2  */
+.wrap-top .add2 {
+    grid-area: add2;
+    background-color: var(--pozadina);
+    text-align: center;
+    font-size: 25px;
+    padding: 30px;
+}
+
+.wrap-top .add1 .price,
+.wrap-top .add2 .price {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 300;
+}
+
+/* opcii */
+.menus {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+.menus .opcii {
+    background-color: #fff;
+    height: 170px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* kutii edit */
+
+.menus .opcii h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.menus .opcii p {
+    color: rgba(0,0,0,0.7);
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.menus .opcii .icon {
+    font-size: 50px;
+}
+
+/* about taco bell */
+.aboutfood {
+    background: #fff;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: center;
+}
+/* img */
+.aboutfood img {
+    width: 95%;
+    height: 260px;
+}
+
+.aboutfood .about {
+    text-align: left;
+  
+}
+
+/* about txt */
+.aboutfood .about h2 {
+    margin-bottom: 5px;
+}
+
+.aboutfood .about > p {
+    margin: 10px 0px;
+}
+
+/* button */
+.aboutfood .about .btn{
+    display: inline-block;
+    border: none;
+    background: var(--pozadina);
+    color: #333;
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.randomgalery {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.galerytitle {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.galerytitle:before {
+    display: block;
+    content: '';
+    height: 10px;
+    background: linear-gradient(to var(--direction1, left), var(--pozadina), transparent);
+}
+
+.galerytitle:after {
+    display: block;
+    content: '';
+    height: 10px;
+    background: linear-gradient(to var(--direction, left), var(--pozadina), transparent);
+}
+
+.gallery h2:after {
+    --direction: right;
+}
+
+.randomgalery .imgs {
+    width: 200px;
+    height: 200px;
+}
+
+
